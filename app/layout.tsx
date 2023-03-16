@@ -2,8 +2,8 @@ import './globals.css'
 import Providers from './providers'
 
 export const metadata = {
-  title: 'CEO',
-  description: 'E-Cell present CEO',
+  title: 'IPL',
+  description: 'E-Cell present IPL',
 }
 
 import { Poppins } from "@next/font/google";
