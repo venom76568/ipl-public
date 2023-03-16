@@ -1,0 +1,45 @@
+# graphql
+
+interface Response {
+  code: String!
+  message: String!
+}
+
+# Form Type
+type Form {
+  id: ID!
+  name: String!
+  email: String!
+  phone: String!
+  college: String!
+  course: String!
+  year: String!
+  consent: Boolean!
+}
+
+input FormInput {
+  name: String!
+  email: String!
+  phone: String!
+  college: String!
+  course: String!
+  year: String!
+  consent: Boolean! 
+}
+
+type FormResponse implements Response {
+  code: String!
+  message: String!
+  data: [Form]!
+}
+
+
+# Query
+type Query {
+  server: String
+}
+
+# Mutation
+type Mutation {
+  createForm(createFormInput: FormInput!): FormResponse
+}
