@@ -425,6 +425,9 @@ const Form = () => {
           <div className="text-red-500 mb-4 text-lg font-bold underline underline-offset-4">
             <span>* Fill the following form according to the team size. A team can be of size 3 - 5</span>
           </div>
+          <div>
+            <span>* Fill the following form according to the team size. A team can be of size 3 - 5</span>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 items-center gap-10">
             {[1, 2, 3, 4].map(id => teamMemberNode(id))}
           </div>
