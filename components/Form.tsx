@@ -76,7 +76,18 @@ const Form = () => {
         });
         setForm(initForm);
         await delay(1500);
-        router.push('/');
+        toast.info("Now you will be redirected to payemnt portal", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        await delay(1500);
+        router.push('https://pay.vnit.ac.in/event');
       } else {
         toast.error(message, {
           position: "top-right",
