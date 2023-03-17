@@ -2,9 +2,9 @@ import React from "react";
 
 const Timeline = () => {
   return (
-    <div className="w-full py-16 text-white bg-[#000131] bg-[url('/assets/cool-background.png')] bg-blend-hard-light bg-cover bg-right" id="timeline">
+    <div className="w-full py-16 text-white bg-[#000131] bg-[url('/assets/cool-background.png')] bg-blend-hard-light bg-cover bg-center" id="timeline">
       <div className="">
-        <h1 className="text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-extrabold font-bodyFont text-center py-4 ">
+        <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-bodyFont text-center py-4 ">
           TIMELINE
         </h1>
 

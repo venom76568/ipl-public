@@ -9,7 +9,7 @@ function Hero() {
       <div className="h-full bg-black bg-opacity-[0.6]">
         <Navbar />
         <div
-          className="relative mt-0 w-full h-screen mx-auto p-6 text-center grid grid-rows-4 justify-center items-center gap-6"
+          className="w-full h-screen mx-auto p-6 text-center grid grid-rows-4 justify-center items-center gap-6"
           id="home"
         >
           <div className="self-center xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-[1.2rem] py-2 text-[#ffffff] font-extrabold font-bodyFont capitalize">

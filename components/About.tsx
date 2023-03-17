@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 const About = () => {
   return (
-    <div className="w-full bg-[#000131] py-16 px-4 section " id="about">
+    <div className="w-full bg-[#000131] py-16 px-10" id="about">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 ">
         <Image
           className="w-[400px] h-[400px] mx-auto my-6"
