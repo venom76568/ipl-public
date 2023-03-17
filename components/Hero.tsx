@@ -19,7 +19,7 @@ function Hero() {
             <Image
               src={logo}
               alt="IPL"
-              className="xl:scale-[3.5] lg:scale-[3] md:scale-[2.5] sm:scale-[2.2] xs:scale-[1.7] scale-[1.3] w-96 inline-flex justify-center"
+              className="xl:scale-[3.5] lg:scale-[3] md:scale-[2.5] sm:scale-[1.7] scale-[1.13] w-96 inline-flex justify-center"
             />
           </div>
           <div className="flex flex-col justify-center row-span-2 gap-10">
@@ -27,7 +27,7 @@ function Hero() {
               Hurry up!! Create your team and Register
             </p>
             <button
-              className="bg-[#f4cb33] w-[200px] font-normal my-8 mx-auto py-3 text-black hover:scale-105 duration-200 hover:bg-white hover:text-black"
+              className="bg-[#f4cb33] w-[200px] font-normal my-8 mx-auto py-3 text-black hover:scale-105 duration-200 hover:bg-yellow-500 hover:text-black"
               style={{ fontSize: "23px" }}
             >
               <a href="#form" className="font-bold font-bodyFont">

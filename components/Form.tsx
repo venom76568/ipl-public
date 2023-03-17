@@ -418,7 +418,22 @@ const Form = () => {
             {[1, 2, 3, 4].map(id => teamMemberNode(id))}
           </div>
           <div className="flex flex-col items-center">
-            <button type="submit" className="w-1/2 md:w-1/5 lg:w-[17%] inline-flex justify-center items-center border border-transparent bg-[#f4cb33] py-3 px-6 text-xl font-bold text-black shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-200 focus:ring-offset-2 uppercase">
+            <div className="my-5 text-white" >
+              <input
+                type="checkbox"
+                name="consent"
+                id="checkbox"
+              />
+              <label htmlFor="consent" className="pl-3 text-lg">
+                I hereby declare that i have read the{" "}
+                <a href="https://drive.google.com/file/d/1QUZYrz_cX1qNIe81CzctPqrAItTWCubM/view?usp=sharing" target='_blank' className="font-black hover:underline underline-offset-4 underline">
+                  Brochure
+                </a>{" "}
+                and the details furnished above are correct to best of my
+                Knowledge.
+              </label>
+            </div>
+            <button type="submit" className="w-1/2 md:w-1/5 lg:w-[17%] inline-flex justify-center items-center border border-transparent bg-[#f4cb33] py-3 px-6 text-xl font-bold text-black shadow-sm focus:outline-none hover:bg-yellow-500 hover:scale-105 uppercase">
               Register
             </button>
           </div>

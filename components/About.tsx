@@ -7,7 +7,7 @@ const About = () => {
     <div className="w-full bg-[#141414] py-16 px-10" id="about">
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-2 ">
         <Image
-          className="w-[400px] h-[400px] my-6 mr-6"
+          className="w-[400px] h-[400px] my-6 lg:mr-6"
           src={Home}
           alt="CricketPlayer..."
         />
@@ -23,11 +23,18 @@ const About = () => {
           <p className="text-white text-lg">
             The IPL Auction, where every bids count and every player has a chance to shine is an event of Entrepreneurship Cell, VNIT Nagpur which provides the platform for participants to witness the magic of cricket as the best players in the world battle it out in the auction block. It allows participants to use their cricketing minds in order to build the strongest team possible. At the IPL Auction, the excitement is palpable as team leaders and cricket enthusiasts use analytical skills like prediction, budget management, and many more to build a dream team.
           </p>
-          <Link href='https://drive.google.com/file/d/12ZWovBZKCYZ9zaYwO28h-cOoUg4WrQf6/view?usp=sharing' target="_blank">
-            <button className="text-black w-[200px] font-medium my-8 mx-auto md:mx-0 py-3 bg-[#f4cb33] hover:scale-105 hover:text-white duration-200 text-xl">
-              Rule Book
+          <div className="flex flex-col sm:flex-row mt-10 md:mt-0 gap-4 lg:gap-10">
+            <button className="text-black w-full md:w-[200px] font-medium my-2 md:my-8 mx-auto md:mx-0 py-3 bg-[#f4cb33] lg:hover:scale-105 hover:bg-yellow-500 duration-200 text-xl">
+              <Link href='https://drive.google.com/file/d/1QUZYrz_cX1qNIe81CzctPqrAItTWCubM/view?usp=sharing' target="_blank">
+                Brochure
+              </Link>
             </button>
-          </Link>
+            <button className="text-black w-full md:w-[200px] font-medium my-2 md:my-8 mx-auto md:mx-0 py-3 bg-[#f4cb33] lg:hover:scale-105 hover:bg-yellow-500 duration-200 text-xl">
+              <Link href='https://drive.google.com/file/d/12ZWovBZKCYZ9zaYwO28h-cOoUg4WrQf6/view?usp=sharing' target="_blank">
+                Rule Book
+              </Link>
+            </button>
+          </div>
         </div>
       </div>
     </div>

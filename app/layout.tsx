@@ -2,8 +2,8 @@ import './globals.css'
 import Providers from './providers'
 
 export const metadata = {
-  title: 'IPL',
-  description: 'E-Cell present IPL',
+  title: 'IPL Auction',
+  description: 'The IPL Auction, where every bids count and every player has a chance to shine is an event of Entrepreneurship Cell, VNIT Nagpur which provides the platform for participants to witness the magic of cricket as the best players in the world battle it out in the auction block.',
 }
 
 import { Poppins } from "@next/font/google";
@@ -21,7 +21,7 @@ export default function RootLayout({
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="viewport" content="width=device-width" initial-scale="1" interactive-widget="resizes-content" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
-        <link rel='icon' href='/assets/ipl.png' />
+        <link rel='icon' href='/assets/logo.png' />
       </head>
       <body className={classNames("w-screen h-screen", poppins.className)}>
         <Providers>

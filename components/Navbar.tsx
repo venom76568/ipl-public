@@ -12,6 +12,7 @@ import ecellLogoBlack from "../public/assets/ecell-black-img.png";
 const navigation = [
   { name: "About", href: "#about" },
   { name: "Timeline", href: "#timeline" },
+  { name: "Brochure", href: "https://drive.google.com/file/d/1QUZYrz_cX1qNIe81CzctPqrAItTWCubM/view?usp=sharing" },
   { name: "Rule Book", href: "https://drive.google.com/file/d/12ZWovBZKCYZ9zaYwO28h-cOoUg4WrQf6/view?usp=sharing" },
   { name: "Contact Us", href: "#contact" },
 ];
