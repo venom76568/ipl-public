@@ -1,45 +1,76 @@
-# graphql
-
-interface Response {
-  code: String!
-  message: String!
+interface IResponse {
+	code: Int!
+	message: String!
 }
 
-# Form Type
-type Form {
-  id: ID!
-  name: String!
-  email: String!
-  phone: String!
-  college: String!
-  course: String!
-  year: String!
-  consent: Boolean!
+type TeamMember {
+	id: ID!
+	name: String
+	email: String
+	phone: String
+	whatsapp: String
+	college: String
 }
 
-input FormInput {
-  name: String!
-  email: String!
-  phone: String!
-  college: String!
-  course: String!
-  year: String!
-  consent: Boolean! 
+type FormData {
+	id: ID!
+	teamName: String!
+	teamLeader: String!
+	email: String!
+	phone: String!
+	whatsapp: String!
+	college: String!
+	teamMembers: [TeamMember]
 }
 
-type FormResponse implements Response {
-  code: String!
-  message: String!
-  data: [Form]!
+input SearchInput {
+	teamName: String
+	teamLeader: String
+	email: String
 }
 
+type FormQueryResponse implements IResponse {
+	code: Int!
+	message: String!
+	form: [FormData!]
+}
 
-# Query
+type FormMutationResponse implements IResponse {
+	code: Int!
+	message: String!
+	form: FormData
+}
+
+input TeamMemberInput {
+	name: String!
+	email: String!
+	phone: String!
+	whatsapp: String!
+	college: String!
+}
+
+input FormDataInput {
+	teamName: String!
+	teamLeader: String!
+	email: String!
+	phone: String!
+	whatsapp: String!
+	college: String!
+	teamMembers: [TeamMemberInput]
+}
+
+input PaginateInput {
+	limit: Int!
+	offset: Int!
+}
+
 type Query {
-  server: String
+	form(id: ID!): FormQueryResponse
+	forms: FormQueryResponse
 }
 
-# Mutation
 type Mutation {
-  createForm(createFormInput: FormInput!): FormResponse
+	createForm(createFormInput: FormDataInput): FormMutationResponse
+	updateForm(id: ID!, updateFormInput: FormDataInput): FormMutationResponse
+	deleteForm(id: ID!): FormMutationResponse
 }

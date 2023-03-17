@@ -33,7 +33,6 @@ interface Iform {
   phone: string;
   whatsapp: string;
   college: string;
-  consent: boolean;
   teamMembers: ITeamMembersForm[];
 }
 
@@ -44,7 +43,6 @@ const initForm: Iform = {
   phone: "",
   whatsapp: "",
   college: "",
-  consent: false,
   teamMembers: Array(4).fill({ ...initMemberForm })
 }
 
@@ -55,48 +53,48 @@ const Form = () => {
   const [form, setForm] = useState<Iform>(initForm);
 
   // mutation
-  // const mutation = useMutation({
-  //   mutationKey: ['createForm'],
-  //   mutationFn: async (regisForm: form) => request("http://localhost:3000/api",
-  //     createFormMutation,
-  //     {
-  //       createFormInput: regisForm,
-  //     }),
-  //   onSuccess: async (data: any) => {
-  //     const code = data.createForm.code;
-  //     const message = data.createForm.message;
-  //     if (code == 201) {
-  //       toast.success(message, {
-  //         position: "top-right",
-  //         autoClose: 1000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         progress: undefined,
-  //         theme: "light",
-  //       });
-  //       setForm(initRegister);
-  //       await delay(1500);
-  //       router.push("https://docs.google.com/forms/d/e/1FAIpQLSeEKgO6vrl0Ybk6Lvmw6_v3cZ59bMuRpP7TekF9YaqxymYZZw/viewform?usp=sf_link");
-  //     } else {
-  //       toast.error(message, {
-  //         position: "top-right",
-  //         autoClose: 1000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         progress: undefined,
-  //         theme: "light",
-  //       });
-  //     }
-  //   },
-  // })
+  const mutation = useMutation({
+    mutationKey: ['createForm'],
+    mutationFn: async (form: Iform) => request("https://ipl-backend.vercel.app/api",
+      createFormMutation,
+      {
+        createFormInput: form,
+      }),
+    onSuccess: async (data: any) => {
+      const code = data.createForm.code;
+      const message = data.createForm.message;
+      if (code == 200) {
+        toast.success(message, {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setForm(initForm);
+        await delay(1500);
+        router.push('/');
+      } else {
+        toast.error(message, {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+    },
+  })
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // mutation.mutate(form);
+    mutation.mutate(form);
   }
 
   const endsWithNumber = (str: string) => /[0-9]+$/.test(str);
