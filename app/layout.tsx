@@ -21,6 +21,7 @@ export default function RootLayout({
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta name="viewport" content="width=device-width" initial-scale="1" interactive-widget="resizes-content" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+        <link rel='icon' href='/assets/ipl.png' />
       </head>
       <body className={classNames("w-screen h-screen", poppins.className)}>
         <Providers>

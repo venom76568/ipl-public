@@ -5,7 +5,7 @@ import logo from "../public/assets/ipl.png";
 import Navbar from "./Navbar";
 function Hero() {
   return (
-    <div className="min-h-screen bg-purple-600 bg-[url('/assets/back4.jpg')] bg-blend-luminosity bg-cover bg-origin-border bg-center">
+    <div className="min-h-screen bg-purple-200 bg-[url('/assets/back4.jpg')] bg-blend-darken bg-cover bg-origin-border bg-center">
       <div className="h-full bg-black bg-opacity-[0.6]">
         <Navbar />
         <div

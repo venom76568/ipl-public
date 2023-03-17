@@ -418,7 +418,7 @@ const Form = () => {
             {[1, 2, 3, 4].map(id => teamMemberNode(id))}
           </div>
           <div className="flex flex-col items-center">
-            <button type="submit" className="w-1/2 md:w-1/5 lg:w-[12%] inline-flex justify-center items-center border border-transparent bg-[#f4cb33] py-3 px-6 text-lg font-medium text-black shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-200 focus:ring-offset-4 uppercase">
+            <button type="submit" className="w-1/2 md:w-1/5 lg:w-[17%] inline-flex justify-center items-center border border-transparent bg-[#f4cb33] py-3 px-6 text-xl font-bold text-black shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-200 focus:ring-offset-2 uppercase">
               Register
             </button>
           </div>
