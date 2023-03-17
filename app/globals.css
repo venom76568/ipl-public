@@ -1,53 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (-webkit-device-pixel-ratio: 1.1) {
+  * {
+    font-size: 90%;
+    -moz-transform: scale(3); 
+    -moz-transform-origin: 0 0;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+  * {
+    font-size: 85%;
+    -moz-transform: scale(3); 
+    -moz-transform-origin: 0 0;
+  }
+}
+
 @font-face {
   font-family: sans-serif;
-  /* src: url(../Fonts/Poppins-SemiBold.ttf); */
-}
-body{
-  background-color: #161716;
-}
-html{
-  scroll-behavior: smooth;
-}
-
-.custom-img{
-  background: url(../public/assets/cric.gif);
-  background: url(../public/assets/back4.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background: rgb(2,0,36); */
-}
-.custom-img3{
-  background: url(../public/assets/wave.png);
-  background-color: white;
-  /* background: url(./assets/back4.jpg); */
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.custom-img2{
-  background: url(../public/assets/cool-background.png);
-  /* background: url(./assets/back4.jpg); */
-  background-color: #000131;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.visible {
-  opacity: 0.5;
-}
-.videoBackground {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
 }

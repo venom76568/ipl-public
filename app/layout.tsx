@@ -17,10 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta name="viewport" content="width=device-width" initial-scale="1" interactive-widget="resizes-content" />
-      <body className={classNames("h-screen w-screen overflow-x-hidden", poppins.className)}>
+      <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta name="viewport" content="width=device-width" initial-scale="1" interactive-widget="resizes-content" />
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no" />
+      </head>
+      <body className={classNames("w-screen h-screen", poppins.className)}>
         <Providers>
-          {children}
+          <div className="flex flex-col-reverse md:flex-row md:h-screen relative overflow-x-hidden">
+            {children}
+          </div>
         </Providers>
       </body>
     </html>

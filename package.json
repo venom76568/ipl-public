@@ -28,8 +28,7 @@
     "react-icons": "^4.8.0",
     "react-notifications": "^1.7.4",
     "react-toastify": "^9.1.1",
-    "typescript": "5.0.2",
-    "yup": "^1.0.2"
+    "typescript": "5.0.2"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^3.2.2",
