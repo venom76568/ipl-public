@@ -18,9 +18,9 @@ const navigation = [
 
 const Navbar = () => {
   return (
-    <Popover className="relative w-full">
+    <Popover className="relative w-full bg-black">
       <div className="px-8">
-        <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
+        <div className="flex items-center justify-between py-1 md:justify-start md:space-x-10">
           <div className="flex gap-4 justify-start">
             <a href="https://www.ecellvnit.org/">
               <span className="sr-only">E-Cell VNIT</span>

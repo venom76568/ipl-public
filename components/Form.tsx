@@ -134,7 +134,7 @@ const Form = () => {
       <div key={id} className="overflow-hidden shadow sm:rounded-md mb-8">
         <div className="px-4 sm:px-0">
           <h3 className="text-lg font-medium leading-6 text-[#f4cb33]">
-            {`Team Member ${id}`}
+            {`Team Member ${id + 1}`}
           </h3>
           <p className="mt-1 text-sm text-white mb-4">
           </p>
@@ -245,8 +245,8 @@ const Form = () => {
 
 
   return (
-    <div id="form" className='bg-[#000131]'>
-      <div className="w-full text-5xl xl:text-6xl text-center py-10 font-semibold text-[#f4cb33] uppercase">
+    <div id="form" className="bg-[#141414]">
+      <div className="w-full text-5xl xl:text-6xl text-center pt-20 pb-10 font-semibold text-[#f4cb33] uppercase">
         Register Now
       </div>
       <div className="py-10 flex flex-col justify-center items-center px-8">

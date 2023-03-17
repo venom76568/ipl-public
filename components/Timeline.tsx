@@ -2,7 +2,7 @@ import React from "react";
 
 const Timeline = () => {
   return (
-    <div className="w-full py-16 text-white bg-[#000131] bg-[url('/assets/cool-background.png')] bg-blend-hard-light bg-cover bg-center" id="timeline">
+    <div className="w-full py-16 text-[#f4cb33] bg-[#000131] bg-[url('/assets/back.jpg')] bg-blend-difference bg-cover bg-center" id="timeline">
       <div className="">
         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-extrabold font-bodyFont text-center py-4 ">
           TIMELINE
@@ -45,7 +45,7 @@ const Timeline = () => {
             <div className="w-full h-full p-2 md:pl-4">
               <h1 className="text-white text-3xl font-medium py-2">26th March</h1>
               <p className="text-gray-100 sm:text-lg text-sm">
-                Elimination Match
+                Elimination Round
               </p>
             </div>
           </div>

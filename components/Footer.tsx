@@ -15,7 +15,7 @@ const Footer = () => {
                 height={180}
                 alt="logo"
               />
-              <div className="max-w-xs scale-125 text-base mt-4 text-[12px] text-white">
+              <div className="max-w-xs scale-125 text-sm mt-4 text-[12px] text-white">
                 E-Cell office, 1st Floor VNIT Canteen,
                 Visvesvaraya National Institute Of Technology,
                 South Ambazari Road, Abhyankar Nagar,
@@ -158,7 +158,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                   </svg>
                   <span>
-                    Ishan Pandey & Abhishek Mishra
+                    Shreyas Jaiwal & Kumari Kavya
                   </span>
                 </div>
                 <div className="flex gap-2 items-center">
@@ -166,7 +166,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                   </svg>
                   <span>
-                    +91 6376317859, +91 8329507391
+                    +91 7841889941, +91 9602780967
                   </span>
                 </div>
               </nav>
