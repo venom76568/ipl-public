@@ -19,7 +19,7 @@ function Hero() {
             <Image
               src={logo}
               alt="IPL"
-              className="xl:scale-[3.5] lg:scale-[3] md:scale-[2.5] sm:scale-[1.7] scale-[1.13] w-96 inline-flex justify-center"
+              className="xl:scale-[3.5] lg:scale-[3] md:scale-[2.5] w-96 inline-flex justify-center"
             />
           </div>
           <div className="flex flex-col justify-center row-span-2 gap-10">
