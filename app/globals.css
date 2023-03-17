@@ -21,3 +21,7 @@
 @font-face {
   font-family: sans-serif;
 }
+
+.Toastify__toast {
+  font-size: 15px;
+}

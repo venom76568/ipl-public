@@ -434,6 +434,7 @@ const Form = () => {
                 type="checkbox"
                 name="consent"
                 id="checkbox"
+                required
               />
               <label htmlFor="consent" className="pl-3 text-lg">
                 I hereby declare that i have read the{" "}
