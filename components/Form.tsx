@@ -76,7 +76,7 @@ const Form = () => {
         });
         setForm(initForm);
         await delay(1500);
-        toast.info("Now you will be redirected to payemnt portal", {
+        toast.info("Now you will be redirected to payment portal", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -426,7 +426,7 @@ const Form = () => {
             <span>* Fill the following form according to the team size. A team can be of size 3 - 5</span>
           </div>
           <div>
-            <span>* Fill the following form according to the team size. A team can be of size 3 - 5</span>
+            <span>* Please send the fees receipt to iplauction.ecellvnit@gmail.com</span>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 items-center gap-10">
             {[1, 2, 3, 4].map(id => teamMemberNode(id))}
