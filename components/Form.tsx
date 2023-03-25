@@ -432,6 +432,9 @@ const Form = () => {
             {[1, 2, 3, 4].map(id => teamMemberNode(id))}
           </div>
           <div className="flex flex-col items-center">
+          <div className="text-gray-500 mb-4 text-lg font-bold underline underline-offset-4">
+            <span>* The amount paid is non-refundable</span>
+          </div>
             <div className="my-5 text-white" >
               <input
                 type="checkbox"
