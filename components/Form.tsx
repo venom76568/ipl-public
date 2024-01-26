@@ -187,10 +187,10 @@ function Register() {
     <form
       id="register"
       onSubmit={handleSubmit}
-      className=" text-black bg-[#820300] about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center h-full"
+      className=" text-black bg-[#141414] about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center h-full"
     >
       <div className="flex flex-col w-full max-w-[450px] ">
-        <h1 className="w-full text-4xl xl:text-5xl text-center py-10 font-semibold text-[#f06e3d] uppercase">
+        <h1 className="w-full text-4xl xl:text-5xl text-center py-10 font-semibold text-[#f4cb33] uppercase">
           Register Here
         </h1>
 
@@ -206,7 +206,7 @@ function Register() {
               onChange={(e) => setTeamName(e.target.value)}
               className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
             /> */}
-          <label htmlFor="teamName" className="mb-2">
+          <label htmlFor="teamName" className="mb-2 text-lg">
             Team Size
           </label>
 
@@ -230,7 +230,7 @@ function Register() {
 
 
         <div className ="flex flex-col mb-4 text-white">
-          <label htmlFor="teamName" className="mb-2">
+          <label htmlFor="teamName" className="mb-2 text-lg">
             Team Name
           </label>
           <input
@@ -244,7 +244,7 @@ function Register() {
           {teamNameError && (
             <div className="text-red-500">{teamNameError}</div>
           )}
-          <label htmlFor="teamLeaderName" className="mb-2">
+          <label htmlFor="teamLeaderName" className="mb-2 text-lg">
             {isTeam ? "Team Leader Name" : "Name"}
           </label>
           <input
@@ -259,7 +259,7 @@ function Register() {
             <div className="text-red-500">{teamLeaderNameError}</div>
           )}
           {teamSize && renderTeamInputs()}
-          <label htmlFor="phoneNumber" className="mb-2">
+          <label htmlFor="phoneNumber" className="mb-2 text-lg">
             Phone Number
           </label>
           <input
@@ -273,7 +273,7 @@ function Register() {
           {phoneNumberError && (
             <div className="text-red-500">{phoneNumberError}</div>
           )}
-          <label htmlFor="email" className="mb-2 ">
+          <label htmlFor="email" className="mb-2 text-lg ">
             Email Address
           </label>
           <input
@@ -288,7 +288,7 @@ function Register() {
         {emailError && (
           <div className="text-red-500">{emailError}</div>
         )}
-        <label htmlFor="challan" className="mb-2 ">
+        <label htmlFor="challan" className="mb-2 text-lg ">
             Challan Number
           </label>
           <input
@@ -303,7 +303,7 @@ function Register() {
           <div className="text-red-500">{challanError}</div>
         )}
         </div>
-        <label className="mb-2 text-white">
+        <label className="mb-2 text-white text-lg">
           <input
             type="checkbox"
             checked={isChecked}
@@ -326,8 +326,8 @@ function Register() {
           disabled={!isChecked && isLoading}
           className="rounded-md px-3.5 max-w-[170px] py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#fff] text-white"
         >
-          <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#f72926] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-          <span className="relative text-white transition duration-300 group-hover:text-white ease">
+          <span className="absolute w-64  h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#f4cb33] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+          <span className="relative text-white text-lg transition duration-300 group-hover:text-black ease">
             {isLoading ? "Loading" : "Register"}
           </span>
         </button>

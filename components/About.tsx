@@ -29,7 +29,7 @@ const About = () => {
                 Brochure
               </button>
             </Link>
-            <Link href='https://drive.google.com/file/d/12ZWovBZKCYZ9zaYwO28h-cOoUg4WrQf6/view?usp=sharing' target="_blank">
+            <Link href='https://docs.google.com/document/d/1-kq-9_rKhKCZXwTbmPN2xNOD1kuXsaVg-CfqW_MStyI/edit' target="_blank">
               <button className="text-black w-full lg:w-[200px] font-medium my-2 md:my-4 lg:my-8 mx-auto md:mx-0 py-3 bg-[#f4cb33] lg:hover:scale-105 hover:bg-yellow-500 duration-200 text-xl">
                 Rule Book
               </button>
