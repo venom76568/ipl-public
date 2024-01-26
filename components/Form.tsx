@@ -49,9 +49,9 @@ function Register() {
         email,             // String: Email address
         phoneNumber,       // String: Phone number
         isChecked ,
-        challan
+        challan:'not aviable'
       };
-
+      setChallan("not aviable");
       
 
       setTeamNameError("");
@@ -288,7 +288,7 @@ function Register() {
         {emailError && (
           <div className="text-red-500">{emailError}</div>
         )}
-        <label htmlFor="challan" className="mb-2 text-lg ">
+        <label htmlFor="challan" className="mb-2 text-lg hidden">
             Challan Number
           </label>
           <input
@@ -297,10 +297,10 @@ function Register() {
             name="challan"
             value={challan}
             onChange={(e) => setChallan(e.target.value)}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2 hidden"
           />
         {challanError && (
-          <div className="text-red-500">{challanError}</div>
+          <div className="text-red-500 hidden">{challanError}</div>
         )}
         </div>
         <label className="mb-2 text-white text-lg">
