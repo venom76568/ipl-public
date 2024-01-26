@@ -18,7 +18,7 @@ const navigation = [
   },
   {
     name: "Rule Book",
-    href: "https://docs.google.com/document/d/1-kq-9_rKhKCZXwTbmPN2xNOD1kuXsaVg-CfqW_MStyI/edit",
+                  href="https://drive.google.com/file/d/1VFw09Blow9Sg2D0fT4C5eKo7smuw2HOK/view?usp=sharing",
   },
   { name: "Contact Us", href: "#contact" },
 ];
