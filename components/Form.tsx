@@ -104,7 +104,7 @@ function Register() {
       }
       // Make the POST request to your backend
       const response = await axios.post(
-        "http://localhost:5000/api/register",
+        "https://ipl-backend.onrender.com/register",
         userData
       ); // Adjust the URL as needed
 
