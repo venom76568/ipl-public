@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState } from "react";
 // import "./style.css";
@@ -43,16 +43,14 @@ function Register() {
       setIsLoading(true);
       // Construct the data to send in the request
       const userData = {
-        teamName,          // String: Team name
-        teamSize,           // Number: Team size (minimum of 3, maximum of 5)
-        teamLeaderName,    // String: Team leader name
-        email,             // String: Email address
-        phoneNumber,       // String: Phone number
-        isChecked ,
-        challan
+        teamName, // String: Team name
+        teamSize, // Number: Team size (minimum of 3, maximum of 5)
+        teamLeaderName, // String: Team leader name
+        email, // String: Email address
+        phoneNumber, // String: Phone number
+        isChecked,
+        challan,
       };
-
-      
 
       setTeamNameError("");
       setTeamLeaderNameError("");
@@ -64,16 +62,16 @@ function Register() {
       if (teamSize === "") {
         throw new Error("Please select a valid Team Size");
       }
-      
+
       if (!teamName) {
         throw new Error("Team Name is required");
       }
-  
+
       // Validation logic for Team Leader Name
       if (!teamLeaderName) {
         throw new Error("Team Leader Name is required");
       }
-  
+
       // Validation logic for Phone Number
       if (!phoneNumber) {
         throw new Error("Phone Number is required");
@@ -133,11 +131,13 @@ function Register() {
         setPhoneNumberError(error.message);
       } else if (error.message.includes("Email Address")) {
         setEmailError(error.message);
-      }else if (error.message.includes("Please give challan number of your payment")) {
+      } else if (
+        error.message.includes("Please give challan number of your payment")
+      ) {
         setChallanError(error.message);
       }
       // Add similar blocks for other fields
-  
+
       console.error("Error registering user:", error);
     } finally {
       setIsLoading(false);
@@ -166,7 +166,6 @@ function Register() {
     }
     return inputs;
   }
-  
 
   if (registrationSuccess) {
     return (
@@ -190,7 +189,7 @@ function Register() {
       className=" text-black bg-[#141414] about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center h-full"
     >
       <div className="flex flex-col w-full max-w-[450px] ">
-        <h1 className="w-full text-4xl xl:text-5xl text-center py-10 font-semibold text-[#f4cb33] uppercase">
+        <h1 className="w-full text-4xl xl:text-5xl text-center py-10 mt-10 font-semibold text-[#f4cb33] uppercase">
           Register Here
         </h1>
 
@@ -217,19 +216,18 @@ function Register() {
             onChange={handleTeamSizeChange}
             defaultValue="select"
           >
-            <option selected value="select">Select Team Size</option>
+            <option selected value="select">
+              Select Team Size
+            </option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
             {/* <option value="4">5</option> */}
           </select>
         </div>
-        {teamSizeError && (
-          <div className="text-red-500">{teamSizeError}</div>
-        )}
+        {teamSizeError && <div className="text-red-500">{teamSizeError}</div>}
 
-
-        <div className ="flex flex-col mb-4 text-white">
+        <div className="flex flex-col mb-4 text-white">
           <label htmlFor="teamName" className="mb-2 text-lg">
             Team Name
           </label>
@@ -241,9 +239,7 @@ function Register() {
             onChange={(e) => setTeamName(e.target.value)}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
-          {teamNameError && (
-            <div className="text-red-500">{teamNameError}</div>
-          )}
+          {teamNameError && <div className="text-red-500">{teamNameError}</div>}
           <label htmlFor="teamLeaderName" className="mb-2 text-lg">
             {isTeam ? "Team Leader Name" : "Name"}
           </label>
@@ -284,11 +280,9 @@ function Register() {
             onChange={(e) => setEmail(e.target.value)}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
-        
-        {emailError && (
-          <div className="text-red-500">{emailError}</div>
-        )}
-        <label htmlFor="challan" className="mb-2 text-lg ">
+
+          {emailError && <div className="text-red-500">{emailError}</div>}
+          <label htmlFor="challan" className="mb-2 text-lg ">
             Challan Number
           </label>
           <input
@@ -299,9 +293,7 @@ function Register() {
             onChange={(e) => setChallan(e.target.value)}
             className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
           />
-        {challanError && (
-          <div className="text-red-500">{challanError}</div>
-        )}
+          {challanError && <div className="text-red-500">{challanError}</div>}
         </div>
         <label className="mb-2 text-white text-lg">
           <input
@@ -331,8 +323,8 @@ function Register() {
             {isLoading ? "Loading" : "Register"}
           </span>
         </button>
-        </div>
-    </ form>
+      </div>
+    </form>
   );
 }
 

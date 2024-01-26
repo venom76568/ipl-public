@@ -30,7 +30,7 @@ function Hero() {
               className="bg-[#f4cb33] w-[200px] font-normal my-8 mx-auto py-3 text-black hover:scale-105 duration-200 hover:bg-yellow-500 hover:text-black"
               style={{ fontSize: "23px" }}
             >
-              <a href="#form" className="font-bold font-bodyFont">
+              <a href="#register" className="font-bold font-bodyFont">
                 Register Now
               </a>
             </button>
