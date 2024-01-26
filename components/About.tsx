@@ -21,15 +21,29 @@ const About = () => {
             auction.
           </h1>
           <p className="text-white text-lg">
-            The IPL Auction, where every bids count and every player has a chance to shine is an event of Entrepreneurship Cell, VNIT Nagpur which provides the platform for participants to witness the magic of cricket as the best players in the world battle it out in the auction block. It allows participants to use their cricketing minds in order to build the strongest team possible. At the IPL Auction, the excitement is palpable as team leaders and cricket enthusiasts use analytical skills like prediction, budget management, and many more to build a dream team.
+            The IPL Auction, where every bids count and every player has a
+            chance to shine is an event of Entrepreneurship Cell, VNIT Nagpur
+            which provides the platform for participants to witness the magic of
+            cricket as the best players in the world battle it out in the
+            auction block. It allows participants to use their cricketing minds
+            in order to build the strongest team possible. At the IPL Auction,
+            the excitement is palpable as team leaders and cricket enthusiasts
+            use analytical skills like prediction, budget management, and many
+            more to build a dream team.
           </p>
           <div className="flex flex-col lg:flex-row mt-10 md:mt-0 gap-4 lg:gap-10">
-            <Link href='https://drive.google.com/file/d/1QUZYrz_cX1qNIe81CzctPqrAItTWCubM/view?usp=sharing' target="_blank">
+            <Link
+              href="https://drive.google.com/file/d/12UXn3vizzI6KHul3Ke-UhBSPTzfMbIFq/view?usp=sharing"
+              target="_blank"
+            >
               <button className="text-black w-full lg:w-[200px] font-medium my-2 md:my-4 lg:my-8 mx-auto md:mx-0 py-3 bg-[#f4cb33] lg:hover:scale-105 hover:bg-yellow-500 duration-200 text-xl">
                 Brochure
               </button>
             </Link>
-            <Link href='https://docs.google.com/document/d/1-kq-9_rKhKCZXwTbmPN2xNOD1kuXsaVg-CfqW_MStyI/edit' target="_blank">
+            <Link
+              href="https://drive.google.com/file/d/1VFw09Blow9Sg2D0fT4C5eKo7smuw2HOK/view?usp=sharing"
+              target="_blank"
+            >
               <button className="text-black w-full lg:w-[200px] font-medium my-2 md:my-4 lg:my-8 mx-auto md:mx-0 py-3 bg-[#f4cb33] lg:hover:scale-105 hover:bg-yellow-500 duration-200 text-xl">
                 Rule Book
               </button>

@@ -26,14 +26,14 @@ function Hero() {
             <p className="text-xl sm:text-2xl py-4 -my-6 font-extrabold font-bodyFont text-white">
               Hurry up!! Create your team and Register
             </p>
-            <button
-              className="bg-[#f4cb33] w-[200px] font-normal my-8 mx-auto py-3 text-black hover:scale-105 duration-200 hover:bg-yellow-500 hover:text-black"
-              style={{ fontSize: "23px" }}
-            >
-              <a href="#form" className="font-bold font-bodyFont">
+            <a href="#register" className="font-bold font-bodyFont">
+              <button
+                className="bg-[#f4cb33] w-[200px] my-8 mx-auto py-3 text-black hover:scale-105 duration-200 hover:bg-yellow-500 hover:text-black"
+                style={{ fontSize: "23px" }}
+              >
                 Register Now
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -12,8 +12,14 @@ import ecellLogoBlack from "../public/assets/ecell-black-img.png";
 const navigation = [
   { name: "About", href: "#about" },
   { name: "Timeline", href: "#timeline" },
-  { name: "Brochure", href: "https://drive.google.com/file/d/1QUZYrz_cX1qNIe81CzctPqrAItTWCubM/view?usp=sharing" },
-  { name: "Rule Book", href: "https://drive.google.com/file/d/12ZWovBZKCYZ9zaYwO28h-cOoUg4WrQf6/view?usp=sharing" },
+  {
+    name: "Brochure",
+    href: "https://drive.google.com/file/d/12UXn3vizzI6KHul3Ke-UhBSPTzfMbIFq/view?usp=sharing",
+  },
+  {
+    name: "Rule Book",
+    href: "https://docs.google.com/document/d/1-kq-9_rKhKCZXwTbmPN2xNOD1kuXsaVg-CfqW_MStyI/edit",
+  },
   { name: "Contact Us", href: "#contact" },
 ];
 
@@ -84,13 +90,8 @@ const Navbar = () => {
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                    <span className="sr-only">
-                      Close menu
-                    </span>
-                    <XMarkIcon
-                      className="h-6 w-6"
-                      aria-hidden="true"
-                    />
+                    <span className="sr-only">Close menu</span>
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
