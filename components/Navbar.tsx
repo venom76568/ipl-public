@@ -14,7 +14,7 @@ const navigation = [
   { name: "Timeline", href: "#timeline" },
   {
     name: "Brochure",
-    href: "https://drive.google.com/file/d/12UXn3vizzI6KHul3Ke-UhBSPTzfMbIFq/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1ZFK9u-IkXqeVDie1GYisBBOe3kZNmWxq/view?usp=sharing",
   },
   {
     name: "Rule Book",
