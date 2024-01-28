@@ -12,6 +12,7 @@ function Register() {
   const [teamName, setTeamName] = useState("");
   const [email, setEmail] = useState("");
   const [challan, setChallan] = useState("");
+  const [college, setCollege] = useState("");
   const [isChecked, setIsChecked] = useState(false);
   const [teamSize, setTeamSize] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -23,6 +24,7 @@ function Register() {
   const [emailError, setEmailError] = useState("");
   const [teamSizeError, setTeamSizeError] = useState("");
   const [challanError, setChallanError] = useState("");
+  const [collegeError, setCollegeError] = useState("");
 
   function handleTeamSizeChange(event) {
     setTeamSize(event.target.value);
@@ -49,6 +51,7 @@ function Register() {
         email,             // String: Email address
         phoneNumber,       // String: Phone number
         isChecked ,
+        college,
         challan:'not aviable'
       };
       setChallan("not aviable");
@@ -60,12 +63,16 @@ function Register() {
       setEmailError("");
       setTeamSizeError("");
       setChallanError("");
+      setCollegeError("");
 
       if (teamSize === "") {
         throw new Error("Please select a valid Team Size");
       }
 
       if (!teamName) {
+        throw new Error("Team Name is required");
+      }
+      if (!college) {
         throw new Error("Team Name is required");
       }
 
@@ -133,6 +140,8 @@ function Register() {
         setPhoneNumberError(error.message);
       } else if (error.message.includes("Email Address")) {
         setEmailError(error.message);
+      } else if (error.message.includes("College Name")) {
+        setCollegeError(error.message);
       } else if (
         error.message.includes("Please give challan number of your payment")
       ) {
@@ -285,7 +294,21 @@ function Register() {
         
         {emailError && (
           <div className="text-red-500">{emailError}</div>
-        )}
+        )}<label htmlFor="college" className="mb-2 text-lg ">
+        College Name
+      </label>
+      <input
+        type="text"
+        id="college"
+        name="college"
+        value={college}
+        onChange={(e) => setCollege(e.target.value)}
+        className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+      />
+    
+    {collegeError && (
+      <div className="text-red-500">{collegeError}</div>
+    )}
         <label htmlFor="challan" className="mb-2 text-lg hidden">
             Challan Number
           </label>
