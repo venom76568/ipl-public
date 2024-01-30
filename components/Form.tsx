@@ -52,9 +52,9 @@ function Register() {
         phoneNumber,       // String: Phone number
         isChecked ,
         college,
-        challan:'not aviable'
+        challan
       };
-      setChallan("not aviable");
+      // setChallan("not aviable");
       
 
       setTeamNameError("");
@@ -155,14 +155,17 @@ function Register() {
       setErrorMsg(true); // Reset loading state to false when the request is complete
     }
   };
-
+  const gotoLink = () => {
+    // Redirect logic here
+    window.location.href = "https://pay.vnit.ac.in/event","_blank";
+  };
   function renderTeamInputs() {
     const inputs = [];
     if (teamSize !== "select") {
       for (let i = 0; i < parseInt(teamSize) - 1; i++) {
         inputs.push(
           <div className="flex flex-col mb-2" key={i}>
-            <label htmlFor={`teamMember${i + 1}`} className="mb-2">
+            <label htmlFor={`teamMember${i + 1}`} className="mb-2 text-lg">
               Team Member {i + 1}
             </label>
             <input
@@ -194,10 +197,11 @@ function Register() {
     );
   }
   return (
+    <>
     <form
       id="register"
       onSubmit={handleSubmit}
-      className=" text-black bg-[#141414] about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center h-full"
+      className=" text-black bg-[#141414] about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center "
     >
       <div className="flex flex-col w-full max-w-[450px] ">
         <h1 className="w-full text-4xl xl:text-5xl text-center py-10 mt-10 font-semibold text-[#f4cb33] uppercase">
@@ -309,7 +313,7 @@ function Register() {
     {collegeError && (
       <div className="text-red-500">{collegeError}</div>
     )}
-        <label htmlFor="challan" className="mb-2 text-lg hidden">
+        <label htmlFor="challan" className="mb-2 text-lg ">
             Challan Number
           </label>
           <input
@@ -318,7 +322,7 @@ function Register() {
             name="challan"
             value={challan}
             onChange={(e) => setChallan(e.target.value)}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2 hidden"
+            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2 "
           />
         {challanError && (
           <div className="text-red-500 hidden">{challanError}</div>
@@ -342,6 +346,7 @@ function Register() {
             team name and email should be unique
           </div>
         )}
+        
         <button
           type="submit"
           disabled={!isChecked && isLoading}
@@ -352,8 +357,27 @@ function Register() {
             {isLoading ? "Loading" : "Register"}
           </span>
         </button>
+        
       </div>
     </form>
+
+    {/* this is link button  */}
+    <div className="bg-[#141414] flex justify-center items-center">
+    <a
+        href="https://pay.vnit.ac.in/event"
+        target="_blank" rel="noopener noreferrer"
+      >
+    <button
+    // onClick={gotoLink}
+    className=" rounded-md px-3.5 max-w-[170px] py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#fff] text-white"
+  >
+     <span className="absolute w-64  h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#f4cb33] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+    <span className="relative text-white text-lg transition duration-300 group-hover:text-black ease">
+  Payment Link
+</span></button>
+</a>
+</div>
+</>
   );
 }
 
