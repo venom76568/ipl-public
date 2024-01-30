@@ -226,7 +226,7 @@ function Register() {
 
           <select
             name="teamSize"
-            className="bg-white border border-gray-300 text-black rounded px-2 py-1 mb-2"
+            className="bg-white border border-gray-300 text-black rounded px-2 py-1 mb-2 text-lg"
             value={teamSize}
             onChange={handleTeamSizeChange}
             defaultValue="select"
@@ -313,6 +313,28 @@ function Register() {
     {collegeError && (
       <div className="text-red-500">{collegeError}</div>
     )}
+        
+
+        {/* {errorMsg && <div className="text-red-500">team name and email should be unique</div>} */}
+        {errorMsg ? (
+          ""
+        ) : (
+          <div className="text-red-500">
+            team name and email should be unique
+          </div>
+        )}
+
+        <div className="mb-2 mt-2 text-white text-lg">
+          Step 2: <a
+          className="text-[#4a4adf] underline text-lg"
+        href="https://pay.vnit.ac.in/event"
+        target="_blank" rel="noopener noreferrer"
+      >Generate Challan</a>
+      <p
+      className="mb-2 px-5 text-white text-lg">
+        Please visit the link, complete the payment , and then copy and paste the CHallan number from the offical VNIT payment site. 
+      </p>
+        </div>
         <label htmlFor="challan" className="mb-2 text-lg ">
             Challan Number
           </label>
@@ -337,16 +359,6 @@ function Register() {
           />
           I agree to the terms and conditions mentioned in the Rule Book
         </label>
-
-        {/* {errorMsg && <div className="text-red-500">team name and email should be unique</div>} */}
-        {errorMsg ? (
-          ""
-        ) : (
-          <div className="text-red-500">
-            team name and email should be unique
-          </div>
-        )}
-        
         <button
           type="submit"
           disabled={!isChecked && isLoading}
@@ -362,7 +374,7 @@ function Register() {
     </form>
 
     {/* this is link button  */}
-    <div className="bg-[#141414] flex justify-center items-center">
+    {/* <div className="bg-[#141414] flex justify-center items-center">
     <a
         href="https://pay.vnit.ac.in/event"
         target="_blank" rel="noopener noreferrer"
@@ -375,8 +387,8 @@ function Register() {
     <span className="relative text-white text-lg transition duration-300 group-hover:text-black ease">
   Payment Link
 </span></button>
-</a>
-</div>
+</a> */}
+{/* </div> */}
 </>
   );
 }
