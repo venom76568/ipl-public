@@ -45,17 +45,16 @@ function Register() {
       setIsLoading(true);
       // Construct the data to send in the request
       const userData = {
-        teamName,          // String: Team name
-        teamSize,           // Number: Team size (minimum of 3, maximum of 5)
-        teamLeaderName,    // String: Team leader name
-        email,             // String: Email address
-        phoneNumber,       // String: Phone number
-        isChecked ,
+        teamName, // String: Team name
+        teamSize, // Number: Team size (minimum of 3, maximum of 5)
+        teamLeaderName, // String: Team leader name
+        email, // String: Email address
+        phoneNumber, // String: Phone number
+        isChecked,
         college,
-        challan
+        challan,
       };
       // setChallan("not aviable");
-      
 
       setTeamNameError("");
       setTeamLeaderNameError("");
@@ -111,7 +110,7 @@ function Register() {
       }
       // Make the POST request to your backend
       const response = await axios.post(
-        "https://ipl-backend.onrender.com/api/register",
+        "https://ipl-backend-cv67.onrender.com/api/register",
         userData
       ); // Adjust the URL as needed
 
@@ -157,7 +156,7 @@ function Register() {
   };
   const gotoLink = () => {
     // Redirect logic here
-    window.location.href = "https://pay.vnit.ac.in/event","_blank";
+    (window.location.href = "https://pay.vnit.ac.in/event"), "_blank";
   };
   function renderTeamInputs() {
     const inputs = [];
@@ -198,18 +197,18 @@ function Register() {
   }
   return (
     <>
-    <form
-      id="register"
-      onSubmit={handleSubmit}
-      className=" text-black bg-[#141414] about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center "
-    >
-      <div className="flex flex-col w-full max-w-[450px] ">
-        <h1 className="w-full text-4xl xl:text-5xl text-center py-10 mt-10 font-semibold text-[#f4cb33] uppercase">
-          Register Here
-        </h1>
+      <form
+        id="register"
+        onSubmit={handleSubmit}
+        className=" text-black bg-[#141414] about w-[100vw] bg-cover py-16 px-5 text-center xl:text-left flex items-center justify-center "
+      >
+        <div className="flex flex-col w-full max-w-[450px] ">
+          <h1 className="w-full text-4xl xl:text-5xl text-center py-10 mt-10 font-semibold text-[#f4cb33] uppercase">
+            Register Here
+          </h1>
 
-        <div className="flex flex-col text-white">
-          {/* <label htmlFor="teamName" className="mb-2">
+          <div className="flex flex-col text-white">
+            {/* <label htmlFor="teamName" className="mb-2">
               Team Name
             </label>
             <input
@@ -220,161 +219,162 @@ function Register() {
               onChange={(e) => setTeamName(e.target.value)}
               className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
             /> */}
-          <label htmlFor="teamName" className="mb-2 text-lg">
-            Team Size
-          </label>
+            <label htmlFor="teamName" className="mb-2 text-lg">
+              Team Size
+            </label>
 
-          <select
-            name="teamSize"
-            className="bg-white border border-gray-300 text-black rounded px-2 py-1 mb-2 text-lg"
-            value={teamSize}
-            onChange={handleTeamSizeChange}
-            defaultValue="select"
-          >
-            <option selected value="select">
-              Select Team Size
-            </option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            {/* <option value="4">5</option> */}
-          </select>
-        </div>
-        {teamSizeError && <div className="text-red-500">{teamSizeError}</div>}
-
-        <div className="flex flex-col mb-4 text-white">
-          <label htmlFor="teamName" className="mb-2 text-lg">
-            Team Name
-          </label>
-          <input
-            type="text"
-            id="teamName"
-            name="teamName"
-            value={teamName}
-            onChange={(e) => setTeamName(e.target.value)}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-          />
-          {teamNameError && <div className="text-red-500">{teamNameError}</div>}
-          <label htmlFor="teamLeaderName" className="mb-2 text-lg">
-            {isTeam ? "Team Leader Name" : "Name"}
-          </label>
-          <input
-            type="text"
-            id="teamLeaderName"
-            name="teamLeaderName"
-            value={teamLeaderName}
-            onChange={(e) => setTeamLeaderName(e.target.value)}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-          />
-          {teamLeaderNameError && (
-            <div className="text-red-500">{teamLeaderNameError}</div>
-          )}
-          {teamSize && renderTeamInputs()}
-          <label htmlFor="phoneNumber" className="mb-2 text-lg">
-            Phone Number
-          </label>
-          <input
-            type="number"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-          />
-          {phoneNumberError && (
-            <div className="text-red-500">{phoneNumberError}</div>
-          )}
-          <label htmlFor="email" className="mb-2 text-lg ">
-            Email Address
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-          />
-        
-        {emailError && (
-          <div className="text-red-500">{emailError}</div>
-        )}<label htmlFor="college" className="mb-2 text-lg ">
-        College Name
-      </label>
-      <input
-        type="text"
-        id="college"
-        name="college"
-        value={college}
-        onChange={(e) => setCollege(e.target.value)}
-        className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
-      />
-    
-    {collegeError && (
-      <div className="text-red-500">{collegeError}</div>
-    )}
-        
-
-        {/* {errorMsg && <div className="text-red-500">team name and email should be unique</div>} */}
-        {errorMsg ? (
-          ""
-        ) : (
-          <div className="text-red-500">
-            team name and email should be unique
+            <select
+              name="teamSize"
+              className="bg-white border border-gray-300 text-black rounded px-2 py-1 mb-2 text-lg"
+              value={teamSize}
+              onChange={handleTeamSizeChange}
+              defaultValue="select"
+            >
+              <option selected value="select">
+                Select Team Size
+              </option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              {/* <option value="4">5</option> */}
+            </select>
           </div>
-        )}
+          {teamSizeError && <div className="text-red-500">{teamSizeError}</div>}
 
-        <div className="mb-2 mt-2 text-white text-lg">
-          Step 2: <a
-          className="text-[#4a4adf] underline text-lg"
-        href="https://pay.vnit.ac.in/event"
-        target="_blank" rel="noopener noreferrer"
-      >Generate Challan</a>
-      <p
-      className="mb-2 px-5 text-white text-lg">
-        Please visit the link, complete the payment , and then copy and paste the CHallan number from the offical VNIT payment site. 
-      </p>
-        </div>
-        <label htmlFor="challan" className="mb-2 text-lg ">
-            Challan Number
+          <div className="flex flex-col mb-4 text-white">
+            <label htmlFor="teamName" className="mb-2 text-lg">
+              Team Name
+            </label>
+            <input
+              type="text"
+              id="teamName"
+              name="teamName"
+              value={teamName}
+              onChange={(e) => setTeamName(e.target.value)}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            />
+            {teamNameError && (
+              <div className="text-red-500">{teamNameError}</div>
+            )}
+            <label htmlFor="teamLeaderName" className="mb-2 text-lg">
+              {isTeam ? "Team Leader Name" : "Name"}
+            </label>
+            <input
+              type="text"
+              id="teamLeaderName"
+              name="teamLeaderName"
+              value={teamLeaderName}
+              onChange={(e) => setTeamLeaderName(e.target.value)}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            />
+            {teamLeaderNameError && (
+              <div className="text-red-500">{teamLeaderNameError}</div>
+            )}
+            {teamSize && renderTeamInputs()}
+            <label htmlFor="phoneNumber" className="mb-2 text-lg">
+              Phone Number
+            </label>
+            <input
+              type="number"
+              id="phoneNumber"
+              name="phoneNumber"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            />
+            {phoneNumberError && (
+              <div className="text-red-500">{phoneNumberError}</div>
+            )}
+            <label htmlFor="email" className="mb-2 text-lg ">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            />
+
+            {emailError && <div className="text-red-500">{emailError}</div>}
+            <label htmlFor="college" className="mb-2 text-lg ">
+              College Name
+            </label>
+            <input
+              type="text"
+              id="college"
+              name="college"
+              value={college}
+              onChange={(e) => setCollege(e.target.value)}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2"
+            />
+
+            {collegeError && <div className="text-red-500">{collegeError}</div>}
+
+            {/* {errorMsg && <div className="text-red-500">team name and email should be unique</div>} */}
+            {errorMsg ? (
+              ""
+            ) : (
+              <div className="text-red-500">
+                team name and email should be unique
+              </div>
+            )}
+
+            <div className="mb-2 mt-2 text-white text-lg">
+              Step 2:{" "}
+              <a
+                className="text-[#4a4adf] underline text-lg"
+                href="https://pay.vnit.ac.in/event"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Generate Challan
+              </a>
+              <p className="mb-2 px-5 text-white text-lg">
+                Please visit the link, complete the payment , and then copy and
+                paste the CHallan number from the offical VNIT payment site.
+              </p>
+            </div>
+            <label htmlFor="challan" className="mb-2 text-lg ">
+              Challan Number
+            </label>
+            <input
+              type="text"
+              id="challan"
+              name="challan"
+              value={challan}
+              onChange={(e) => setChallan(e.target.value)}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2 "
+            />
+            {challanError && (
+              <div className="text-red-500 hidden">{challanError}</div>
+            )}
+          </div>
+          <label className="mb-2 text-white text-lg">
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={handleCheckboxChange}
+              className="border bg-[#fff] text-[black] border-gray-400 rounded mb-2"
+            />
+            I agree to the terms and conditions mentioned in the Rule Book
           </label>
-          <input
-            type="text"
-            id="challan"
-            name="challan"
-            value={challan}
-            onChange={(e) => setChallan(e.target.value)}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded px-2 py-1 mb-2 "
-          />
-        {challanError && (
-          <div className="text-red-500 hidden">{challanError}</div>
-        )}
+          <button
+            type="submit"
+            disabled={!isChecked && isLoading}
+            className="rounded-md px-3.5 max-w-[170px] py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#fff] text-white"
+          >
+            <span className="absolute w-64  h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#f4cb33] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+            <span className="relative text-white text-lg transition duration-300 group-hover:text-black ease">
+              {isLoading ? "Loading" : "Register"}
+            </span>
+          </button>
         </div>
-        <label className="mb-2 text-white text-lg">
-          <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={handleCheckboxChange}
-            className="border bg-[#fff] text-[black] border-gray-400 rounded mb-2"
-          />
-          I agree to the terms and conditions mentioned in the Rule Book
-        </label>
-        <button
-          type="submit"
-          disabled={!isChecked && isLoading}
-          className="rounded-md px-3.5 max-w-[170px] py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#fff] text-white"
-        >
-          <span className="absolute w-64  h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#f4cb33] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-          <span className="relative text-white text-lg transition duration-300 group-hover:text-black ease">
-            {isLoading ? "Loading" : "Register"}
-          </span>
-        </button>
-        
-      </div>
-    </form>
+      </form>
 
-    {/* this is link button  */}
-    {/* <div className="bg-[#141414] flex justify-center items-center">
+      {/* this is link button  */}
+      {/* <div className="bg-[#141414] flex justify-center items-center">
     <a
         href="https://pay.vnit.ac.in/event"
         target="_blank" rel="noopener noreferrer"
@@ -388,8 +388,8 @@ function Register() {
   Payment Link
 </span></button>
 </a> */}
-{/* </div> */}
-</>
+      {/* </div> */}
+    </>
   );
 }
 
