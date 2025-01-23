@@ -54,7 +54,7 @@ const Timeline = () => {
             />
             <TimelineItem
               icon={Users}
-              date="1 February 2025"
+              date="2 February 2025"
               title="Elimination Round"
               description="The Elimination Round will be conducted on this day. The details will be communicated to the registered teams."
             />
