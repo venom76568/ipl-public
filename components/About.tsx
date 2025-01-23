@@ -33,7 +33,7 @@ const About = () => {
           </p>
           <div className="flex flex-col lg:flex-row mt-10 md:mt-0 gap-4 lg:gap-10">
             <Link
-              href="https://drive.google.com/file/d/1ZFK9u-IkXqeVDie1GYisBBOe3kZNmWxq/view?usp=sharing"
+              href="https://drive.google.com/file/d/1AvllXGaK-xc_Zugb9rXtSs-sOasrZUVd/view?usp=drivesdk"
               target="_blank"
             >
               <button className="text-black w-full lg:w-[200px] font-medium my-2 md:my-4 lg:my-8 mx-auto md:mx-0 py-3 bg-[#f4cb33] lg:hover:scale-105 hover:bg-yellow-500 duration-200 text-xl">
