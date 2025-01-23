@@ -143,7 +143,7 @@ const Footer = () => {
                   href="https://consortium.ecellvnit.org/"
                 >
                   {" "}
-                  Consortium&apos;24{" "}
+                  Consortium&apos;25{" "}
                 </a>
                 <a
                   className="hover:opacity-75"

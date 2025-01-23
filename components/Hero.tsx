@@ -27,7 +27,7 @@ function Hero() {
               IPL AUCTION
             </h1>
             <p className="text-2xl md:text-4xl font-bold text-white animate-fade-in-delay">
-              PRIZES WORTH ₹15K
+              PRIZES WORTH ₹11K
             </p>
           </div>
 
