@@ -337,7 +337,7 @@ function Register() {
               </p>
             </div>
             <label htmlFor="challan" className="mb-2 text-lg ">
-              Challan Number
+              Bank Transaction ID
             </label>
             <input
               type="text"
