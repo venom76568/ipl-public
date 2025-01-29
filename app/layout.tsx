@@ -25,7 +25,7 @@ export default function RootLayout({
       </head>
       <body className={classNames("w-screen h-screen", poppins.className)}>
         <Providers>
-          <div className="flex flex-col-reverse md:flex-row md:h-screen relative md:overflow-x-hidden">
+          <div className="flex flex-col-reverse md:flex-row md:h-screen relative md:overflow-x-hidden overflow-y-hidden">
             {children}
           </div>
         </Providers>
