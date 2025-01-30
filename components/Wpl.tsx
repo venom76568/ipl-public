@@ -38,9 +38,10 @@ export default function Wpl() {
               transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             >
               <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-8">
-                This season, we're taking the excitement to the next level! Along with your favorite IPL players, 
-                we are bringing top WPL stars into the auction pool. Build your ultimate dream team by bidding 
-                on the best talents from both leagues and experience a whole new level of strategy and thrill!
+                This season, we&apos;re taking the excitement to the next level! Along with your favorite IPL players, 
+we are bringing top WPL stars into the auction pool. Build your ultimate dream team by bidding 
+on the best talents from both leagues and experience a whole new level of strategy and thrill!
+
               </p>
             </motion.div>
   
